@@ -1,7 +1,7 @@
 /*
  * @Author: jhong.tao
  * @Date: 2021-10-11 14:45:05
- * @LastEditTime: 2021-10-11 19:56:06
+ * @LastEditTime: 2021-10-13 16:47:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webofsecience\test.js
@@ -37,7 +37,7 @@ function getMd5(str){
 }
 
 // ·­Òëº¯Êı
-async function getTrans(query, sign, appid, salt){
+function getTrans(query, sign, appid, salt){
     var from = 'en';
     var to = 'zh';
     return new Promise(function(resolve, reject){
@@ -56,7 +56,10 @@ async function getTrans(query, sign, appid, salt){
         },
         success: function(data) {
             resolve(data.trans_result[0].dst);
-        }
+        },
+        error: err => {
+            reject(err);
+          }
         });
     });  
 };

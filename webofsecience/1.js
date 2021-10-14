@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-11 19:56:14
- * @LastEditTime: 2021-10-12 08:26:26
+ * @LastEditTime: 2021-10-12 20:44:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webofsecience\1.js
@@ -38,7 +38,7 @@ function getMd5(str){
     return def.promise();
 }
 
-async function getTrans(query){
+function getTrans(query){
     var appid = '20210914000943517';    // ∞Ÿ∂»µƒapi’À∫≈
     var key = 'zdhKVWmSlAPmXItiE4zh';      // √‹‘ø
     var from = 'en';
@@ -61,7 +61,6 @@ async function getTrans(query){
             sign: sign
         },
         success: function(data) {
-            alert(data.length)
             resolve(data.trans_result[0].dst);
         }
         });
