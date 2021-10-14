@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-14 10:44:19
- * @LastEditTime: 2021-10-14 11:09:18
+ * @LastEditTime: 2021-10-14 11:23:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webofsecience\res.js
@@ -103,3 +103,5 @@ async function requestSomething(){
         };
     };
 };
+
+requestSomething()
